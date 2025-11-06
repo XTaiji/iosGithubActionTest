@@ -8,6 +8,7 @@ Unit tests for FoodTruckModel
 import XCTest
 @testable import FoodTruckKit
 
+@MainActor
 final class FoodTruckModelTests: XCTestCase {
 
     var model: FoodTruckModel!
@@ -36,7 +37,17 @@ final class FoodTruckModelTests: XCTestCase {
         // Test that each donut has valid properties
         for donut in model.donuts {
             XCTAssertFalse(donut.name.isEmpty, "Donut name should not be empty")
-            XCTAssertFalse(donut.id.uuidString.isEmpty, "Donut ID should be valid")
+            XCTAssertGreaterThanOrEqual(donut.id, 0, "Donut ID should be valid (>= 0)")
         }
+    }
+
+    func testTruckExists() {
+        // Test that the truck is initialized
+        XCTAssertNotNil(model.truck, "Truck should exist")
+    }
+
+    func testOrdersExist() {
+        // Test that orders are generated
+        XCTAssertFalse(model.orders.isEmpty, "Orders should be generated on initialization")
     }
 }

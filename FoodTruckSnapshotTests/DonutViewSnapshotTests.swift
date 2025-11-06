@@ -10,25 +10,38 @@ import SwiftUI
 import SnapshotTesting
 @testable import FoodTruckKit
 
+@MainActor
 final class DonutViewSnapshotTests: XCTestCase {
 
-    func testDonutGalleryItemSnapshot() {
-        // Test snapshot of DonutGalleryItem view
-        let donut = Donut.previewDonut
-        let view = DonutGalleryItem(donut: donut)
+    func testDonutViewSnapshot() {
+        // Test snapshot of DonutView
+        let donut = Donut.preview
+        let view = DonutView(donut: donut)
+            .frame(width: 200, height: 200)
         let hostingController = UIHostingController(rootView: view)
-        hostingController.view.frame = CGRect(x: 0, y: 0, width: 375, height: 200)
+        hostingController.view.frame = CGRect(x: 0, y: 0, width: 200, height: 200)
 
-        assertSnapshot(matching: hostingController, as: .image, record: false)
+        assertSnapshot(of: hostingController, as: .image, record: false)
     }
 
-    func testDonutEditorSnapshot() {
-        // Test snapshot of DonutEditor view
-        let donut = Donut.previewDonut
-        let view = DonutEditor(donut: .constant(donut))
+    func testDonutStackViewSnapshot() {
+        // Test snapshot of DonutStackView with multiple donuts
+        let donuts = [Donut.classic, Donut.strawberryDrizzle, Donut.cosmos]
+        let view = DonutStackView(donuts: donuts)
+            .frame(width: 300, height: 300)
         let hostingController = UIHostingController(rootView: view)
-        hostingController.view.frame = CGRect(x: 0, y: 0, width: 375, height: 667)
+        hostingController.view.frame = CGRect(x: 0, y: 0, width: 300, height: 300)
 
-        assertSnapshot(matching: hostingController, as: .image, record: false)
+        assertSnapshot(of: hostingController, as: .image, record: false)
+    }
+
+    func testSingleDonutSnapshot() {
+        // Test snapshot of a single classic donut
+        let view = DonutView(donut: Donut.classic)
+            .frame(width: 150, height: 150)
+        let hostingController = UIHostingController(rootView: view)
+        hostingController.view.frame = CGRect(x: 0, y: 0, width: 150, height: 150)
+
+        assertSnapshot(of: hostingController, as: .image, record: false)
     }
 }

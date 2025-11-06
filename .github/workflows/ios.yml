@@ -62,23 +62,62 @@ jobs:
             CODE_SIGNING_ALLOWED=NO \
             | tee unit-test.log
 
-      # Snapshot tests are disabled until reference images are committed
-      # To enable: uncomment this step and commit reference images to the repo
-      # - name: Run Snapshot Tests
-      #   run: |
-      #     DEVICE=$(xcrun simctl list devices available iPhone | grep -m 1 "iPhone" | sed -E 's/(.+) \([A-F0-9-]+\) \(.+\)/\1/' | xargs)
-      #     echo "Using simulator: $DEVICE"
-      #
-      #     set -o pipefail
-      #     xcodebuild test \
-      #       -project "Food Truck.xcodeproj" \
-      #       -scheme "FoodTruckSnapshotTests" \
-      #       -destination "platform=iOS Simulator,name=$DEVICE" \
-      #       -derivedDataPath DerivedData \
-      #       CODE_SIGN_IDENTITY="" \
-      #       CODE_SIGNING_REQUIRED=NO \
-      #       CODE_SIGNING_ALLOWED=NO \
-      #       | tee snapshot-test.log
+      - name: Run Snapshot Tests (Generate Mode)
+        run: |
+          # Find an available iPhone simulator
+          DEVICE=$(xcrun simctl list devices available iPhone | grep -m 1 "iPhone" | sed -E 's/(.+) \([A-F0-9-]+\) \(.+\)/\1/' | xargs)
+          echo "Using simulator: $DEVICE"
+
+          set -o pipefail
+          xcodebuild test \
+            -project "Food Truck.xcodeproj" \
+            -scheme "FoodTruckSnapshotTests" \
+            -destination "platform=iOS Simulator,name=$DEVICE" \
+            -derivedDataPath DerivedData \
+            CODE_SIGN_IDENTITY="" \
+            CODE_SIGNING_REQUIRED=NO \
+            CODE_SIGNING_ALLOWED=NO \
+            | tee snapshot-test.log
+
+      - name: Find and Package Snapshot Images
+        if: always()
+        run: |
+          echo "Searching for generated snapshots..."
+
+          # Find all __Snapshots__ directories
+          find . -type d -name "__Snapshots__" -print
+
+          # Create snapshots directory
+          mkdir -p snapshots-output
+
+          # Copy all snapshot directories to output
+          find . -type d -name "__Snapshots__" -exec cp -R {} snapshots-output/ \;
+
+          # List what we found
+          echo "Contents of snapshots-output:"
+          ls -la snapshots-output/ || echo "No snapshots found"
+          find snapshots-output -type f -name "*.png" -print || echo "No PNG files found"
+
+          # Create a zip file
+          if [ -d "snapshots-output/__Snapshots__" ]; then
+            cd snapshots-output
+            zip -r ../snapshot-images.zip __Snapshots__/
+            cd ..
+            echo "✅ Created snapshot-images.zip"
+            ls -lh snapshot-images.zip
+          else
+            echo "⚠️ No snapshots directory found"
+          fi
+
+      - name: Upload Snapshot Images
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: snapshot-images
+          path: |
+            snapshot-images.zip
+            snapshots-output/
+          if-no-files-found: warn
 
       - name: Upload Test Logs
         if: always()
@@ -88,3 +127,4 @@ jobs:
           path: |
             build.log
             unit-test.log
+            snapshot-test.log

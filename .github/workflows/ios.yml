@@ -24,6 +24,10 @@ jobs:
       - name: Show available simulators
         run: xcrun simctl list devices available iPhone
 
+      - name: Resolve Swift Package Dependencies
+        run: |
+          xcodebuild -resolvePackageDependencies -project "Food Truck.xcodeproj" -scheme "Food Truck"
+
       - name: Build App
         run: |
           # Find an available iPhone simulator
@@ -41,8 +45,7 @@ jobs:
             CODE_SIGNING_ALLOWED=NO \
             | tee build.log
 
-      - name: Run Tests
-        continue-on-error: true
+      - name: Run Unit Tests
         run: |
           # Find an available iPhone simulator
           DEVICE=$(xcrun simctl list devices available iPhone | grep -m 1 "iPhone" | sed -E 's/(.+) \([A-F0-9-]+\) \(.+\)/\1/' | xargs)
@@ -51,10 +54,37 @@ jobs:
           set -o pipefail
           xcodebuild test \
             -project "Food Truck.xcodeproj" \
-            -scheme "Food Truck" \
+            -scheme "FoodTruckTests" \
             -destination "platform=iOS Simulator,name=$DEVICE" \
             -derivedDataPath DerivedData \
             CODE_SIGN_IDENTITY="" \
             CODE_SIGNING_REQUIRED=NO \
             CODE_SIGNING_ALLOWED=NO \
-            | tee test.log || echo "⚠️  Tests failed or no tests configured in scheme"
+            | tee unit-test.log
+
+      - name: Run Snapshot Tests
+        run: |
+          # Find an available iPhone simulator
+          DEVICE=$(xcrun simctl list devices available iPhone | grep -m 1 "iPhone" | sed -E 's/(.+) \([A-F0-9-]+\) \(.+\)/\1/' | xargs)
+          echo "Using simulator: $DEVICE"
+
+          set -o pipefail
+          xcodebuild test \
+            -project "Food Truck.xcodeproj" \
+            -scheme "FoodTruckSnapshotTests" \
+            -destination "platform=iOS Simulator,name=$DEVICE" \
+            -derivedDataPath DerivedData \
+            CODE_SIGN_IDENTITY="" \
+            CODE_SIGNING_REQUIRED=NO \
+            CODE_SIGNING_ALLOWED=NO \
+            | tee snapshot-test.log
+
+      - name: Upload Test Logs
+        if: always()
+        uses: actions/upload-artifact@v3
+        with:
+          name: test-logs
+          path: |
+            build.log
+            unit-test.log
+            snapshot-test.log

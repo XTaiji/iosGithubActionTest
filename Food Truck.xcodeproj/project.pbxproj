@@ -6,7 +6,13 @@
 	objectVersion = 56;
 	objects = {
 
-/* Begin PBXBuildFile section */
+/* Begin PBXBuildFile section */		86EB256F00A8BA5A47B5D6DE /* FoodTruckModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C6F19E00CAFC189C0331752 /* FoodTruckModelTests.swift */; };
+		A6C0F0CA97603DE7B5E9A605 /* DonutTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D55D81FF6DE3B830A5277CB2 /* DonutTests.swift */; };
+		BCF1C5EB3FC0BEFC77200992 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 89D637391D20D836EA7A10DF /* Info.plist */; };
+		3689FFC79E3E547E7C3B8567 /* DonutViewSnapshotTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E68A1B32519386AC4A4976D2 /* DonutViewSnapshotTests.swift */; };
+		80BD18152417D84B6C7568C2 /* BrandHeaderSnapshotTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA47F493E7B72C85884D81F /* BrandHeaderSnapshotTests.swift */; };
+		54BDDE7FCF525A48C6961180 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A802A8416FE0E45CC371948B /* Info.plist */; };
+
 		6178CE6E2845B07E00F240E8 /* CardNavigationHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6178CE6D2845B07E00F240E8 /* CardNavigationHeader.swift */; };
 		6178CE6F2845B07E00F240E8 /* CardNavigationHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6178CE6D2845B07E00F240E8 /* CardNavigationHeader.swift */; };
 		84ACCDC3282D671600756FB7 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 84ACCDC1282D671600756FB7 /* Localizable.strings */; };
@@ -133,6 +139,20 @@
 			remoteGlobalIDString = E0C37C3128234145007B925B;
 			remoteInfo = Widgets;
 		};
+		D7E310AEA9DCC1A56D1223BF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E0C37BB92823189A007B925B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E0C37BC02823189A007B925B;
+			remoteInfo = "Food Truck";
+		};
+		C859991893E6ADA428A28787 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E0C37BB92823189A007B925B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E0C37BC02823189A007B925B;
+			remoteInfo = "Food Truck";
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -160,7 +180,15 @@
 		};
 /* End PBXCopyFilesBuildPhase section */
 
-/* Begin PBXFileReference section */
+/* Begin PBXFileReference section */		7C6F19E00CAFC189C0331752 /* FoodTruckModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodTruckModelTests.swift; sourceTree = "<group>"; };
+		D55D81FF6DE3B830A5277CB2 /* DonutTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DonutTests.swift; sourceTree = "<group>"; };
+		89D637391D20D836EA7A10DF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E68A1B32519386AC4A4976D2 /* DonutViewSnapshotTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DonutViewSnapshotTests.swift; sourceTree = "<group>"; };
+		DEA47F493E7B72C85884D81F /* BrandHeaderSnapshotTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrandHeaderSnapshotTests.swift; sourceTree = "<group>"; };
+		A802A8416FE0E45CC371948B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B1182929A69FBE6C691C2918 /* FoodTruckTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FoodTruckTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		98091669D516EAE30C66CC13 /* FoodTruckSnapshotTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FoodTruckSnapshotTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+
 		6178CE6D2845B07E00F240E8 /* CardNavigationHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardNavigationHeader.swift; sourceTree = "<group>"; };
 		7AE906C103F323E6CEF38CA5 /* LICENSE.txt */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE.txt; sourceTree = "<group>"; };
 		84ACCDC5282D671600756FB7 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -262,6 +290,20 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		6EDF24B1FE8504ED2BCEEFCA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		448CE8BD461AB86FCE18EE03 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -318,6 +360,8 @@
 				E0C37BC22823189A007B925B /* Products */,
 				DB809B5F6F06B12150E80E07 /* Configuration */,
 				137C553818E1EDD211275177 /* LICENSE */,
+				1406DC1BF3FA8B6C555F053B /* FoodTruckTests */,
+				EDAE1F1844131896EA4F86B3 /* FoodTruckSnapshotTests */,
 			);
 			sourceTree = "<group>";
 		};
@@ -327,6 +371,8 @@
 				E0C37BC12823189A007B925B /* Food Truck.app */,
 				E0C37C3228234145007B925B /* Widgets.appex */,
 				E051076C283C187300FCE3E6 /* Food Truck All.app */,
+				B1182929A69FBE6C691C2918 /* FoodTruckTests.xctest */,
+				98091669D516EAE30C66CC13 /* FoodTruckSnapshotTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -463,6 +509,26 @@
 			path = Widgets;
 			sourceTree = "<group>";
 		};
+		1406DC1BF3FA8B6C555F053B /* FoodTruckTests */ = {
+			isa = PBXGroup;
+			children = (
+				7C6F19E00CAFC189C0331752 /* FoodTruckModelTests.swift */,
+				D55D81FF6DE3B830A5277CB2 /* DonutTests.swift */,
+				89D637391D20D836EA7A10DF /* Info.plist */,
+			);
+			path = FoodTruckTests;
+			sourceTree = "<group>";
+		};
+		EDAE1F1844131896EA4F86B3 /* FoodTruckSnapshotTests */ = {
+			isa = PBXGroup;
+			children = (
+				E68A1B32519386AC4A4976D2 /* DonutViewSnapshotTests.swift */,
+				DEA47F493E7B72C85884D81F /* BrandHeaderSnapshotTests.swift */,
+				A802A8416FE0E45CC371948B /* Info.plist */,
+			);
+			path = FoodTruckSnapshotTests;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -530,6 +596,49 @@
 			productReference = E0C37C3228234145007B925B /* Widgets.appex */;
 			productType = "com.apple.product-type.app-extension";
 		};
+		1BC7EA10C44A2C5E68BA4724 /* FoodTruckTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 74BB3B17C0D9E91461E4C4D5 /* Build configuration list for PBXNativeTarget "FoodTruckTests" */;
+			buildPhases = (
+				A9773091BDE54B56660F620D /* Sources */,
+				6EDF24B1FE8504ED2BCEEFCA /* Frameworks */,
+				1C21F98DE37583B6AE6ECE5E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				939FA1EA8188C5D2458D6F35 /* PBXTargetDependency */,
+			);
+			name = FoodTruckTests;
+			packageProductDependencies = (
+				185F588C93443DFD163E3BE0 /* FoodTruckKit */,
+			);
+			productName = FoodTruckTests;
+			productReference = B1182929A69FBE6C691C2918 /* FoodTruckTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		BE42040BC1724C0CAC9035B4 /* FoodTruckSnapshotTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 11B78B317D764C59CA639A58 /* Build configuration list for PBXNativeTarget "FoodTruckSnapshotTests" */;
+			buildPhases = (
+				6332A683B814D41C8DF87BE1 /* Sources */,
+				448CE8BD461AB86FCE18EE03 /* Frameworks */,
+				5638F3AB7FD1FD773FE081C5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C9943DF9AB168C5A4E72C6A2 /* PBXTargetDependency */,
+			);
+			name = FoodTruckSnapshotTests;
+			packageProductDependencies = (
+				44475E88709A3E1A657E8C88 /* FoodTruckKit */,
+				CF4ADE852E383CF6FC0A99B5 /* SnapshotTesting */,
+			);
+			productName = FoodTruckSnapshotTests;
+			productReference = 98091669D516EAE30C66CC13 /* FoodTruckSnapshotTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -542,7 +651,15 @@
 				ORGANIZATIONNAME = Apple;
 				TargetAttributes = {
 					E0C37BC02823189A007B925B = {
+						CreatedOnToolsVersion = 14.0;					1BC7EA10C44A2C5E68BA4724 = {
 						CreatedOnToolsVersion = 14.0;
+						TestTargetID = E0C37BC02823189A007B925B;
+					};
+					BE42040BC1724C0CAC9035B4 = {
+						CreatedOnToolsVersion = 14.0;
+						TestTargetID = E0C37BC02823189A007B925B;
+					};
+
 					};
 					E0C37C3128234145007B925B = {
 						CreatedOnToolsVersion = 14.0;
@@ -558,7 +675,10 @@
 				Base,
 				ar,
 			);
-			mainGroup = E0C37BB82823189A007B925B;
+			mainGroup = E0C37BB82823189A007B925B;			packageReferences = (
+				3A30EDF9C3749B3798590649 /* XCRemoteSwiftPackageReference "swift-snapshot-testing" */,
+			);
+			
 			productRefGroup = E0C37BC22823189A007B925B /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -566,6 +686,8 @@
 				E0C37BC02823189A007B925B /* Food Truck */,
 				E0510730283C187300FCE3E6 /* Food Truck All */,
 				E0C37C3128234145007B925B /* Widgets */,
+				1BC7EA10C44A2C5E68BA4724 /* FoodTruckTests */,
+				BE42040BC1724C0CAC9035B4 /* FoodTruckSnapshotTests */,
 			);
 		};
 /* End PBXProject section */
@@ -595,6 +717,20 @@
 			files = (
 				E0C37C3C28234148007B925B /* Assets.xcassets in Resources */,
 				84ACCDC6282D671600756FB7 /* Localizable.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1C21F98DE37583B6AE6ECE5E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5638F3AB7FD1FD773FE081C5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -718,6 +854,24 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		A9773091BDE54B56660F620D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				86EB256F00A8BA5A47B5D6DE /* FoodTruckModelTests.swift in Sources */,
+				A6C0F0CA97603DE7B5E9A605 /* DonutTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6332A683B814D41C8DF87BE1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3689FFC79E3E547E7C3B8567 /* DonutViewSnapshotTests.swift in Sources */,
+				80BD18152417D84B6C7568C2 /* BrandHeaderSnapshotTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -730,6 +884,16 @@
 			isa = PBXTargetDependency;
 			target = E0C37C3128234145007B925B /* Widgets */;
 			targetProxy = E0C37C5428236B18007B925B /* PBXContainerItemProxy */;
+		};
+		939FA1EA8188C5D2458D6F35 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E0C37BC02823189A007B925B /* Food Truck */;
+			targetProxy = D7E310AEA9DCC1A56D1223BF /* PBXContainerItemProxy */;
+		};
+		C9943DF9AB168C5A4E72C6A2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E0C37BC02823189A007B925B /* Food Truck */;
+			targetProxy = C859991893E6ADA428A28787 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -1122,6 +1286,88 @@
 			};
 			name = Release;
 		};
+		A46D4A00457BBAE438086D14 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = FoodTruckTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.example.apple-samplecode.Food-Truck.FoodTruckTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Food Truck.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Food Truck";
+			};
+			name = Debug;
+		};
+		88D8510046ED5B59B590C54F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = FoodTruckTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.example.apple-samplecode.Food-Truck.FoodTruckTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Food Truck.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Food Truck";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		2173FC05B08D43F441C0230E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = FoodTruckSnapshotTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.example.apple-samplecode.Food-Truck.FoodTruckSnapshotTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Food Truck.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Food Truck";
+			};
+			name = Debug;
+		};
+		CC1094767E93695D97261446 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = FoodTruckSnapshotTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.example.apple-samplecode.Food-Truck.FoodTruckSnapshotTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Food Truck.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Food Truck";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -1161,8 +1407,37 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
+		74BB3B17C0D9E91461E4C4D5 /* Build configuration list for PBXNativeTarget "FoodTruckTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A46D4A00457BBAE438086D14 /* Debug */,
+				88D8510046ED5B59B590C54F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		11B78B317D764C59CA639A58 /* Build configuration list for PBXNativeTarget "FoodTruckSnapshotTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2173FC05B08D43F441C0230E /* Debug */,
+				CC1094767E93695D97261446 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 /* End XCConfigurationList section */
 
+
+/* Begin XCRemoteSwiftPackageReference section */
+		3A30EDF9C3749B3798590649 /* XCRemoteSwiftPackageReference "swift-snapshot-testing" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/pointfreeco/swift-snapshot-testing";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.15.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
 /* Begin XCSwiftPackageProductDependency section */
 		E0510733283C187300FCE3E6 /* FoodTruckKit */ = {
 			isa = XCSwiftPackageProductDependency;
@@ -1175,6 +1450,19 @@
 		E0C37C4D2823515A007B925B /* FoodTruckKit */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = FoodTruckKit;
+		};
+		185F588C93443DFD163E3BE0 /* FoodTruckKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = FoodTruckKit;
+		};
+		44475E88709A3E1A657E8C88 /* FoodTruckKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = FoodTruckKit;
+		};
+		CF4ADE852E383CF6FC0A99B5 /* SnapshotTesting */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3A30EDF9C3749B3798590649 /* XCRemoteSwiftPackageReference "swift-snapshot-testing" */;
+			productName = SnapshotTesting;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

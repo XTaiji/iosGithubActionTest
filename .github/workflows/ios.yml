@@ -63,13 +63,14 @@ jobs:
             | tee unit-test.log
 
       - name: Run Snapshot Tests (Generate Mode)
-        continue-on-error: true
         run: |
           # Find an available iPhone simulator
           DEVICE=$(xcrun simctl list devices available iPhone | grep -m 1 "iPhone" | sed -E 's/(.+) \([A-F0-9-]+\) \(.+\)/\1/' | xargs)
           echo "Using simulator: $DEVICE"
 
-          set -o pipefail
+          echo "🔄 Running snapshot tests in record mode (failures are expected)..."
+
+          # Run tests without pipefail - we want snapshots generated regardless of test pass/fail
           xcodebuild test \
             -project "Food Truck.xcodeproj" \
             -scheme "FoodTruckSnapshotTests" \
@@ -78,7 +79,9 @@ jobs:
             CODE_SIGN_IDENTITY="" \
             CODE_SIGNING_REQUIRED=NO \
             CODE_SIGNING_ALLOWED=NO \
-            | tee snapshot-test.log || echo "⚠️ Snapshot tests completed with errors (expected in record mode)"
+            | tee snapshot-test.log || true
+
+          echo "✅ Snapshot generation complete (exit code ignored)"
 
       - name: Find and Package Snapshot Images
         if: always()

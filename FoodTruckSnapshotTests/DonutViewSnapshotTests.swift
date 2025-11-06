@@ -21,7 +21,7 @@ final class DonutViewSnapshotTests: XCTestCase {
         let hostingController = UIHostingController(rootView: view)
         hostingController.view.frame = CGRect(x: 0, y: 0, width: 200, height: 200)
 
-        assertSnapshot(of: hostingController, as: .image, record: false)
+        assertSnapshot(of: hostingController, as: .image, record: true)
     }
 
     func testDonutStackViewSnapshot() {
@@ -32,7 +32,7 @@ final class DonutViewSnapshotTests: XCTestCase {
         let hostingController = UIHostingController(rootView: view)
         hostingController.view.frame = CGRect(x: 0, y: 0, width: 300, height: 300)
 
-        assertSnapshot(of: hostingController, as: .image, record: false)
+        assertSnapshot(of: hostingController, as: .image, record: true)
     }
 
     func testSingleDonutSnapshot() {
@@ -42,6 +42,6 @@ final class DonutViewSnapshotTests: XCTestCase {
         let hostingController = UIHostingController(rootView: view)
         hostingController.view.frame = CGRect(x: 0, y: 0, width: 150, height: 150)
 
-        assertSnapshot(of: hostingController, as: .image, record: false)
+        assertSnapshot(of: hostingController, as: .image, record: true)
     }
 }

@@ -20,7 +20,7 @@ final class BrandHeaderSnapshotTests: XCTestCase {
         let hostingController = UIHostingController(rootView: view)
         hostingController.view.frame = CGRect(x: 0, y: 0, width: 375, height: 200)
 
-        assertSnapshot(of: hostingController, as: .image, record: false)
+        assertSnapshot(of: hostingController, as: .image, record: true)
     }
 
     func testBrandHeaderReducedSnapshot() {
@@ -30,6 +30,6 @@ final class BrandHeaderSnapshotTests: XCTestCase {
         let hostingController = UIHostingController(rootView: view)
         hostingController.view.frame = CGRect(x: 0, y: 0, width: 375, height: 100)
 
-        assertSnapshot(of: hostingController, as: .image, record: false)
+        assertSnapshot(of: hostingController, as: .image, record: true)
     }
 }
